@@ -83,6 +83,7 @@
     <Compile Include="Logica\clServicioL.cs" />
     <Compile Include="Presentacion\Menu.Master.cs">
       <DependentUpon>Menu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentacion\Menu.Master.designer.cs">
       <DependentUpon>Menu.Master</DependentUpon>
