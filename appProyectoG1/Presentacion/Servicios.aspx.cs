@@ -13,5 +13,12 @@ namespace appProyectoG1.Presentacion
         {
 
         }
+
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
+
 }
