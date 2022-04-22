@@ -6,6 +6,8 @@ using System.Web;
 namespace appProyectoG1.Entidad
 {
     public class clClienteE
+
     {
+
     }
 }
