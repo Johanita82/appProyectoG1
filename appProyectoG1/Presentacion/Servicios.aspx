@@ -42,6 +42,7 @@
             </div>
 
             <div class="card-footer">
+                <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label><br />
                 <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="btnRegistrar_Click" />
             </div>
 

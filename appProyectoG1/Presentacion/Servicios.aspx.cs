@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using appProyectoG1.Entidad;
+using appProyectoG1.Logica;
 
 namespace appProyectoG1.Presentacion
 {
@@ -16,6 +18,14 @@ namespace appProyectoG1.Presentacion
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+            clServicioE objDatos = new clServicioE();
+            objDatos.nombreServicio = txtNombre.Text;
+            objDatos.descripcion = txtDescripcion.Text;
+            objDatos.idCliente = int.Parse(ddlCliente.SelectedValue.ToString());
+            objDatos.idProveedor = int.Parse(ddlProveedor.SelectedValue.ToString());
+
+            clServicioL objServicioL = new clServicioL();
+            int resultado = objServicioL.mtdRegistrar(objDatos);
 
         }
 
