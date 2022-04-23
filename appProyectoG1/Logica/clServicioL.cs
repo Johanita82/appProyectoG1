@@ -7,5 +7,7 @@ namespace appProyectoG1.Logica
 {
     public class clServicioL
     {
+
+        //jijiijijij
     }
 }
