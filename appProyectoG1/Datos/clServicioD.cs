@@ -7,5 +7,6 @@ namespace appProyectoG1.Datos
 {
     public class clServicioD
     {
+
     }
 }
