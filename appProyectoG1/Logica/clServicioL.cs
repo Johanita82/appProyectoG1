@@ -15,5 +15,15 @@ namespace appProyectoG1.Logica
             int resultado = objServicioD.mtdRegistrar(objDatos);
             return resultado;
         }
+
+
+        public List<clServicioE> mtdListarS()
+        {
+            clServicioD objdatosPro = new clServicioD();
+            List<clServicioE> objproE = new List<clServicioE>();
+            objproE = objdatosPro.mtdListarS();
+            return objproE;
+
+        }
     }
 }
