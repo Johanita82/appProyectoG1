@@ -13,6 +13,9 @@ namespace appProyectoG1.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            clServicioL objServicioL = new clServicioL();
+            dgvServicio.DataSource = objServicioL.mtdListarS();
+            dgvServicio.DataBind();
 
         }
 

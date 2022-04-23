@@ -12,7 +12,7 @@
 
     <div class="container">
 
-        <div class="card">
+        <div class="card my-5">
 
             <div class="card-header">Registro de Servicios</div>
 
@@ -47,6 +47,11 @@
             </div>
 
         </div>
+
+        <asp:GridView ID="dgvServicio" runat="server" CssClass="table "></asp:GridView>
+        
+
+
 
     </div>
 
