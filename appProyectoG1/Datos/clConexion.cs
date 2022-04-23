@@ -14,7 +14,7 @@ namespace appProyectoG1.Datos
         SqlConnection conexion;
         public clConexion()
         {
-            conexion = new SqlConnection("Data Source=SOGAPRRBCFSD542\\SQLEXPRESS;Initial Catalog=restaurante;Integrated Security=True");
+            conexion = new SqlConnection("Data Source=SOGAPRRBCFSD542\\SQLEXPRESS;Initial Catalog=dbProyectog1;Integrated Security=True");
             conexion.Open();
         }
 
