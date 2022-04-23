@@ -7,5 +7,20 @@ namespace appProyectoG1.Entidad
 {
     public class clClienteE
     {
+        int idCliente { get; set; }
+
+        string documento { get; set; }
+
+        string nombre { get; set; } 
+
+        string apellido { get; set; }
+
+        string telefono { get; set; }
+
+
+        string   correo { get; set; }
+        string direccion { get; set; }
+
+        
     }
 }
