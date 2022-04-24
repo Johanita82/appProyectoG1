@@ -13,9 +13,24 @@ namespace appProyectoG1.Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            clServicioL objServicioL = new clServicioL();
-            dgvServicio.DataSource = objServicioL.mtdListarS();
-            dgvServicio.DataBind();
+            if (!Page.IsPostBack)
+            {
+                clServicioL objServicioL = new clServicioL();
+                dgvServicio.DataSource = objServicioL.mtdListarS();
+                dgvServicio.DataBind();
+
+                clClienteL objClienteL = new clClienteL();
+                ddlCliente.DataSource = objClienteL.mtdlistar();
+                ddlCliente.DataValueField = "idCliente";
+                ddlCliente.DataTextField = "nombre";
+                ddlCliente.DataBind();
+                ddlCliente.Items.Insert(0, new ListItem("Seleccione Cliente", "0"));
+
+                clProveedorL objProveedorL = new clProveedorL();
+                //ddlProveedor.DataSource = objProveedorL.mtdListar();
+                //ddlProveedor.DataBind();
+                //ddlProveedor.Items.Insert(0, new ListItem("Seleccione Proveedor", "0"));
+            }
 
         }
 
@@ -25,10 +40,25 @@ namespace appProyectoG1.Presentacion
             objDatos.nombreServicio = txtNombre.Text;
             objDatos.descripcion = txtDescripcion.Text;
             objDatos.idCliente = int.Parse(ddlCliente.SelectedValue.ToString());
-            objDatos.idProveedor = int.Parse(ddlProveedor.SelectedValue.ToString());
+            objDatos.idProveedor = 1; /*int.Parse(ddlProveedor.SelectedValue.ToString());
+*/
+            if (objDatos.idCliente != 0 /*&& objDatos.idProveedor != 0*/)
+            {
+                clServicioL objServicioL = new clServicioL();
+                int resultado = objServicioL.mtdRegistrar(objDatos);
 
-            clServicioL objServicioL = new clServicioL();
-            int resultado = objServicioL.mtdRegistrar(objDatos);
+                if (resultado != 0)
+                {
+                    lblMensaje.Text = "Servicio pedido con exito";
+                    dgvServicio.DataSource = objServicioL.mtdListarS();
+                    dgvServicio.DataBind();
+                }
+                else
+                {
+                    lblMensaje.Text = "Ocurrio un error";
+                }
+
+            }
 
         }
 
