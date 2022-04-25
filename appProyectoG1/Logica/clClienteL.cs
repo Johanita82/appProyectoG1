@@ -16,5 +16,12 @@ namespace appProyectoG1.Logica
             listaCliente = objDatosC.mtdListar();
             return listaCliente;
         }
+
+        public int mtdRegistrar(clClienteE objDatos)
+        {
+            clClienteD objDatosPedido = new clClienteD();
+            int resultado = objDatosPedido.mtdRegistrar(objDatos);
+            return resultado;
+        }
     }
 }

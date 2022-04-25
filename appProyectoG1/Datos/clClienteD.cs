@@ -33,5 +33,18 @@ namespace appProyectoG1.Datos
             }
             return ListaCliente;
         }
+
+        public int mtdRegistrar(clClienteE objDatos)
+        {
+            string sql = "insert into cliente (documento,nombre,apellido,telefono,correo,direccion) values ('"+objDatos.documento+"','"+objDatos.nombre+"','"+objDatos.apellido+"','"+objDatos.telefono+"','"+objDatos.correo+"','"+objDatos.direccion+"')";
+            clConexion objConexion = new clConexion();
+
+            int resultado = objConexion.mtdConectar(sql);
+
+            return resultado;
+        }
+
+
+
     }
 }

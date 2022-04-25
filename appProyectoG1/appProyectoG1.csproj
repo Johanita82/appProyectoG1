@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Presentacion\frmClienteInsertar.aspx" />
     <Content Include="Presentacion\frmClienteListar.aspx" />
     <Content Include="Presentacion\Servicios.aspx" />
     <Content Include="Web.config" />
@@ -82,6 +83,13 @@
     <Compile Include="Logica\clClienteL.cs" />
     <Compile Include="Logica\clProveedorL.cs" />
     <Compile Include="Logica\clServicioL.cs" />
+    <Compile Include="Presentacion\frmClienteInsertar.aspx.cs">
+      <DependentUpon>frmClienteInsertar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmClienteInsertar.aspx.designer.cs">
+      <DependentUpon>frmClienteInsertar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmClienteListar.aspx.cs">
       <DependentUpon>frmClienteListar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
