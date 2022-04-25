@@ -13,7 +13,7 @@ namespace appProyectoG1.Datos
         SqlConnection conexion;
         public clConexion()
         {
-            conexion = new SqlConnection("Data Source=DESKTOP-CSMQEBG;Initial Catalog=restaurante;Integrated Security=True");
+            conexion = new SqlConnection("Data Source=LAPTOP-0DVIKOLF\\SQLEXPRESS01;Initial Catalog=dbProyectog1;Integrated Security=True");
             conexion.Open();
         }
 
